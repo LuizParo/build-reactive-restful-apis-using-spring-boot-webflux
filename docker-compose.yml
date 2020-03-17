@@ -1,0 +1,13 @@
+version: '3'
+services:
+    database:
+        image: 'mongo'
+        container_name: 'mongodb-spring-reactive-application'
+        environment: 
+            - MONGO_INITDB_DATABASE=mongodb
+            - MONGO_INITDB_ROOT_USERNAME=mongodb
+            - MONGO_INITDB_ROOT_PASSWORD=mongodb
+        volumes:
+            - ./mongo-data:/data/db
+        ports: 
+            - 27017-27019:27017-27019
