@@ -5,8 +5,6 @@ services:
         container_name: 'mongodb-spring-reactive-application'
         environment: 
             - MONGO_INITDB_DATABASE=mongodb
-            - MONGO_INITDB_ROOT_USERNAME=mongodb
-            - MONGO_INITDB_ROOT_PASSWORD=mongodb
         volumes:
             - ./mongo-data:/data/db
         ports: 
